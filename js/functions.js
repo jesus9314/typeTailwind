@@ -7,6 +7,7 @@ const eventDelegation = (e) => {
     const btnProfile = document.querySelector("#btnProfile");
     //delegación de eventos
     if (target === (btnMenu === null || btnMenu === void 0 ? void 0 : btnMenu.childNodes[3]) || target === (btnMenu === null || btnMenu === void 0 ? void 0 : btnMenu.childNodes[5]) || target === btnMenu) {
+        changeSvg();
         const menuNav = document.querySelector("#mobile-menu");
         menu(menuNav);
     }
@@ -25,6 +26,12 @@ const eventDelegation = (e) => {
 //recibe el elemento a mostrar/ocultar
 const menu = (element) => {
     element === null || element === void 0 ? void 0 : element.classList.toggle("hidden");
+};
+const changeSvg = () => {
+    const svgMenu = document.querySelector("#svgMenu");
+    const svgMenuClose = document.querySelector("#svgMenuClose");
+    svgMenu === null || svgMenu === void 0 ? void 0 : svgMenu.classList.toggle("hidden");
+    svgMenuClose === null || svgMenuClose === void 0 ? void 0 : svgMenuClose.classList.toggle("hidden");
 };
 const closeAll = () => {
     const menu = document.querySelector("#mobile-menu");
